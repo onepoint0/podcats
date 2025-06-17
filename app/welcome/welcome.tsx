@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import PodcastGrid from '../components/PodcastGrid';
-
+import RssFeedGrid from '../components/RssFeedGrid';
+import PodcastSearch from '~/components/PodcastSearch';
+import PodcastGrid from '~/components/PodcastGrid';
 export function Welcome() {
-  // const [rssFeed, setRssFeed] = useState("https://feeds.simplecast.com/tOjNXec5");
-  const [rssFeed, setRssFeed] = useState();
+  const [rssFeed, setRssFeed] = useState("https://feeds.simplecast.com/tOjNXec5");
+  // const [rssFeed, setRssFeed] = useState();
 
   // const handleLoadRssFeed = () => {
   //   const 
@@ -21,11 +22,13 @@ export function Welcome() {
             <input id="rssFeedUrl" type="text" onChange={(e) => {setRssFeed(e.target.value)}}/>
             {/* <button onClick={handleLoadRssFeed}>Load Feed</button> */}
           </div>
-          <PodcastGrid 
+          {/* <RssFeedGrid 
             rssfeed={rssFeed}
             height="500px"
             width="100vw"
-          />
+          /> */}
+          {/* <PodcastSearch /> */}
+          <PodcastGrid />
         </div>
       </div>
     </main>
